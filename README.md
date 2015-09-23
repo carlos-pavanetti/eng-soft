@@ -1,20 +1,20 @@
-# UNIFESP - Instituto de Ciência e Tecnologia
-## Atividade da disciplina *Engenharia de Software*
-### São José dos Campos, 2015
+## UNIFESP - Instituto de Ciência e Tecnologia
+### Atividade da disciplina *Engenharia de Software*
+###### São José dos Campos, 2015
 
 
-## Objetivo
+### Objetivo
 Nesta disciplina serão aprendidos metodologias para projetar e desenvolver softwares com qualidade e que atendam os requisitos necessários.
 Este repositório armazena as informações sobre o software que será desenvolvido para avaliação da disciplina.
 
 ## Integrantes
 --------------------------------|--------
-- Carlos Pavanetti Silva do Prado | 86767
-- Cássio Peres Vicente | 69421
-- Cauê Bittencourt Carnietto | 61544
-- Felipe Tomino de Oliveira Santana | 86802
-- Mário Henrique Souza Soares | 86356
-- Ronaldo Nagata | 77493
+Carlos Pavanetti Silva do Prado | 86767
+Cássio Peres Vicente | 69421
+Cauê Bittencourt Carnietto | 61544
+Felipe Tomino de Oliveira Santana | 86802
+Mário Henrique Souza Soares | 86356
+Ronaldo Nagata | 77493
 
 ## Ideias propostas
 1. CMS/Gerenciador de Blogs;
