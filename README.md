@@ -3,12 +3,13 @@
 ###### São José dos Campos, 2015
 
 
-### Objetivo
+## Objetivo
 Nesta disciplina serão aprendidos metodologias para projetar e desenvolver softwares com qualidade e que atendam os requisitos necessários.
 Este repositório armazena as informações sobre o software que será desenvolvido para avaliação da disciplina.
 
 ## Integrantes
---------------------------------|--------
+Nome | RA
+-----|-----
 Carlos Pavanetti Silva do Prado | 86767
 Cássio Peres Vicente | 69421
 Cauê Bittencourt Carnietto | 61544
