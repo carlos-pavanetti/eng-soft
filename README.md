@@ -17,11 +17,8 @@ Felipe Tomino de Oliveira Santana | 86802
 Mário Henrique Souza Soares | 86356
 Ronaldo Nagata | 77493
 
-## Ideias propostas
-1. CMS/Gerenciador de Blogs;
-2. Agenda que escolhe melhor horário de reunião;
-3. App para automatizar pedidos com GPS;
-4. Jogo estilo Tower Defense;
-5. Jogo em que o jogador controla o personagem programando um script;
-6. Cara-a-cara com amigos do facebook;
-7. Truco multiplayer online.
+## Ideia proposta
+### Estante Virtual / Biblioteca Solidária
+Uma rede onde pessoas possam encontrar livros e leitores.
+Trocar, doar, emprestar e recomendar livros! Essas são as possibilidades que queremos oferecer aos leitores.
+Ser lido, relido, folheado por novas mãos, viajar e conhecer novos leitores! São as possibilidades que oferecemos aos livros.
