@@ -1,7 +1,7 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Para rodar esta aplicação, executar uma vez o comando `bundle install`, podendo ser `bundle install --path vendor/bundle`.
+Em seguida executar o comando `rails server` e acessar o navegador no endereço http://localhost:3000
 
 Things you may want to cover:
 
