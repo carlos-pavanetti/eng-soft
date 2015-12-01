@@ -10,5 +10,10 @@
   <%= @usuario.email %>
 </p>
 
+<p>
+  <strong>Senha:</strong>
+  <%= @usuario.senha %>
+</p>
+
 <%= link_to 'Edit', edit_usuario_path(@usuario) %> |
 <%= link_to 'Back', usuarios_path %>
