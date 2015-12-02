@@ -41,6 +41,15 @@ group :development, :test do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+
+  # Permite criar especificações no estilo BDD
+  gem 'rspec-rails'
+
+  # Gera objetos para testes, substituindo o método padrão de fixtures
+  gem 'factory_girl_rails'
 end
 
-gem "rspec-rails", :group => [:development, :test]
+group :test do
+  # Para gerar dados de teste
+  gem 'faker'
+end
