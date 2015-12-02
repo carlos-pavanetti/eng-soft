@@ -47,6 +47,9 @@ group :development, :test do
 
   # Gera objetos para testes, substituindo o método padrão de fixtures
   gem 'factory_girl_rails'
+
+  # Cria um hash dos atributos desejados de uma instância
+  gem 'hashifiable'
 end
 
 group :test do
