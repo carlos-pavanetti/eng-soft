@@ -1,20 +1,6 @@
 require 'rails_helper'
 
 RSpec.describe UsuariosController, type: :controller do
-
-  # This should return the minimal set of attributes required to create a valid
-  # Usuario. As you add validations to Usuario, be sure to
-  # adjust the attributes here as well.
-  let(:valid_attributes) {
-    # {nome: "Usuario", email: "valido@gmail.com", senha: "passwd"}
-    skip "atributos suficientes para validar"
-  }
-
-  let(:invalid_attributes) {
-    # {nome:nil, email:nil, senha:nil}
-    skip "atributos suficientes para invalidar"
-  }
-
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # UsuariosController. Be sure to keep this updated too.
@@ -22,7 +8,7 @@ RSpec.describe UsuariosController, type: :controller do
 
   describe "GET #index" do
     it "assigns all usuarios as @usuarios" do
-      usuario = Usuario.create! valid_attributes
+      usuario = FactoryGirl.create(:usuario)
       get :index, {}, valid_session
       expect(assigns(:usuarios)).to eq([usuario])
     end
