@@ -1,4 +1,4 @@
-class AdicionaReferenciaUsuarioParaAdministrador < ActiveRecord::Migration
+class AdicionaReferenciaUsuarioParaAdministradores < ActiveRecord::Migration
   def change
       add_reference :administradores, :usuario, index: true, foreign_key: true
   end

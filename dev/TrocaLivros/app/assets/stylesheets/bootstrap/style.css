@@ -1,0 +1,56 @@
+.dropdown-menu {
+    min-width: 260px !important;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar-toggle{
+    background-color: white;
+}
+
+.jumbotron{
+    background-image: url(../imagens_layout/livro_aberto.jpg);
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    text-shadow: black 0.2em 0.1em 0.1em;
+    padding-left: 20px;
+    text-align: center;
+}
+
+input.transparent-input{
+       background-color:rgba(0,0,0,0) !important;
+       border:none !important;
+}
+
+.thumbnail {
+  display: block;
+  padding: 4px;
+  margin-bottom: 20px;
+  line-height: 1.42857143;
+  background-color: #f4f2f4;
+  border: 1px solid #dddddd;
+  border-radius: 4px;
+  -webkit-transition: border 0.2s ease-in-out;
+  -o-transition: border 0.2s ease-in-out;
+  transition: border 0.2s ease-in-out;
+}
+.thumbnail > img,
+.thumbnail a > img {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 200px;
+}
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail.active {
+  border-color: #225a48;
+}
+.thumbnail .caption {
+  padding: 9px;
+  color: #000000;
+}
+.thumbnail .caption > h3{
+    color: #225a48;
+}
