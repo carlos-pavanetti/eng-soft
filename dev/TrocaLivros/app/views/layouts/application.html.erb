@@ -11,7 +11,7 @@
         <div class="navbar navbar-default navbar-static-top">
             <div class="container">
                 <div class="navbar-brand">
-                <a href="/" class="pull-left"><img class="logo" src="/images/logo_texto.png" style="max-width:100px; margin-top: -7px;"></a>
+                  <%= link_to(image_tag('logo_texto.png', style: 'max-width:100px; margin-top: -7px;'), root_url)%>
                 </div>
 
                 <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
@@ -69,9 +69,6 @@
                 </div>
             </div>
         </div>
-
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-        <script src="js/bootstrap.js"></script>
 <%= yield %>
 <%= console %>
 </body>

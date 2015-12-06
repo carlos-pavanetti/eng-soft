@@ -13,5 +13,11 @@
  *= require_tree .
  *= require_self
  */
+@import "lavish-theme";
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.dropdown-menu {
+  padding: 0 30px;
+  min-width: 260px;
+}
