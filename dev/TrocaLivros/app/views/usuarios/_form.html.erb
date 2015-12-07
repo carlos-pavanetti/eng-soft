@@ -11,16 +11,16 @@
     </div>
   <% end %>
 
-  <% {nome: 'Nome Completo', email: 'Email', password: 'Senha', password_confirmation: 'Confirme sua senha'}.each do |field, label| %>
+  <% fields.each do |field, label| %>
     <div class="form-group">
-      <%= f.label label, class: 'col-sm-3 control-label' %>
+      <%= f.label field[:label], class: 'col-sm-3 control-label' %>
       <div class="col-sm-9">
-        <%= f.text_field field, class: 'col-sm-9 form-control' %>
+        <%= f.send field[:type], field[:field], class: 'col-sm-9 form-control' %>
       </div>
     </div>
   <% end %>
 
-  <% if ['new', 'create'].include? params[:action] %>
+  <% if signup? %>
     <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
         <%= f.check_box :termos_de_servico %>
