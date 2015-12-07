@@ -11,38 +11,19 @@
     </div>
   <% end %>
 
-  <div class="form-group">
-    <%= f.label :Nome_completo, class: 'col-sm-3 control-label' %>
-    <div class="col-sm-9">
-      <%= f.text_field :nome, class: 'col-sm-9 form-control' %>
+  <% {nome: 'Nome Completo', email: 'Email', password: 'Senha', password_confirmation: 'Confirme sua senha'}.each do |field, label| %>
+    <div class="form-group">
+      <%= f.label label, class: 'col-sm-3 control-label' %>
+      <div class="col-sm-9">
+        <%= f.text_field field, class: 'col-sm-9 form-control' %>
+      </div>
     </div>
-  </div>
+  <% end %>
 
-  <div class="form-group">
-    <%= f.label :Email, class: 'col-sm-3 control-label' %>
-    <div class="col-sm-9">
-      <%= f.text_field :email, class: 'col-sm-9 form-control' %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Senha, class: 'col-sm-3 control-label' %>
-    <div class="col-sm-9">
-      <%= f.text_field :password, class: 'col-sm-9 form-control' %>
-    </div>
-  </div>
-
-  <div class="form-group">
-    <%= f.label :Confirme_sua_senha, class: 'col-sm-3 control-label' %>
-    <div class="col-sm-9">
-      <%= f.text_field :password_confirmation, class: 'col-sm-9 form-control' %>
-    </div>
-  </div>
-
-  <% if params[:action] == 'new' %>
+  <% if ['new', 'create'].include? params[:action] %>
     <div class="form-group">
       <div class="col-sm-9 col-sm-offset-3">
-        <%= f.check_box :password_confirmation%>
+        <%= f.check_box :termos_de_servico %>
         <%= f.label :Aceito_os_termos_de_Uso %>
       </div>
     </div>

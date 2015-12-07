@@ -6,6 +6,7 @@ class Usuario < ActiveRecord::Base
 
   before_save { self.email = email.downcase }
 
+  validates :termos_de_servico, acceptance: true
   validates :nome, presence: true
   validates :email, presence: true,
                     uniqueness: { case_sensitive: false },
