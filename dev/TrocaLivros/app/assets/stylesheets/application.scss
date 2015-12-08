@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+$icon-font-path: 'bootstrap/';
+
+@import "lavish-theme";
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+.dropdown-menu {
+  padding: 10px 30px 0;
+  min-width: 260px;
+}

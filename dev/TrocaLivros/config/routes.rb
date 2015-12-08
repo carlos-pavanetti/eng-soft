@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root 'usuarios#index'
+
   resources :usuarios
 
   # The priority is based upon order of creation: first created -> highest priority.

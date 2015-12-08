@@ -13,4 +13,11 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
+//= require bootstrap-sprockets
 //= require_tree .
+
+$(document).ready(function() {
+  $('.dropdown-menu').click(function(e) {
+    return e.stopPropagation();
+  });
+});
