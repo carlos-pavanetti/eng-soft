@@ -4,13 +4,18 @@ class SessionsController < ApplicationController
 
   def create
     user = Usuario.find_by_email(params[:session][:email])
-    if user && user.authenticate(params[:session][:password])
-      session[:user_id] = user.id
-      flash[:success] = 'You are logged in, modafoca!'
-      redirect_to user
-    else
-      flash[:danger] = 'Invalid email or password'
+    unless user
+      flash[:danger] = 'Usuário inválido &#9855;'
       render 'new'
+    else
+      unless user.authenticate(params[:session][:password])
+        flash[:danger] = 'Senha inválida ♿'
+        render 'new'
+      else
+        session[:user_id] = user.id
+        flash[:success] = 'You are logged in, modafoca!'
+        redirect_to user
+      end
     end
   end
 
