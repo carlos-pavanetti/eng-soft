@@ -6,10 +6,11 @@ class SessionsController < ApplicationController
     user = Usuario.find_by_email(params[:session][:email])
     if user && user.authenticate(params[:session][:password])
       session[:user_id] = user.id
-      redirect_to user, notice: 'You are logged in, modafoca!'
+      flash[:success] = 'You are logged in, modafoca!'
+      redirect_to user
     else
       flash[:danger] = 'Invalid email or password'
-      redirect_to user
+      render 'new'
     end
   end
 
