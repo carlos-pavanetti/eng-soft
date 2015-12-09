@@ -4,6 +4,8 @@ class Usuario < ActiveRecord::Base
   extend Hashifiable
   hashify :nome, :email, :senha
 
+  has_many :livros, dependent: :destroy
+
   before_save { self.email = email.downcase }
 
   validates :termos_de_servico, acceptance: true
