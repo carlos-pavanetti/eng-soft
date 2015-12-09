@@ -1,8 +1,10 @@
 require 'hashifiable'
 
 class Usuario < ActiveRecord::Base
-  extend Hashifiable
-  hashify :nome, :email, :senha
+  unless Rails.env.production?
+    extend Hashifiable
+    hashify :nome, :email, :senha
+  end
 
   before_save { self.email = email.downcase }
 
