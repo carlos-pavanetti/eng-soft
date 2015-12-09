@@ -13,4 +13,8 @@ class Usuario < ActiveRecord::Base
                     format: { with: /\A[^@]+ @ (?:[^@\.]+ \.)+ [^@\.]+\z/ix }
 
   has_secure_password
+
+  def to_param
+    nome
+  end
 end
