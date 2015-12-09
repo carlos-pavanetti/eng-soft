@@ -25,8 +25,13 @@
 
       <!-- OPCOES USUARIO -->
       <ul class="nav navbar-nav navbar-right">
-        <li> <a href="#"> Cadastre-se </a> </li>
-        <li> <a class="dropdown-toggle" data-toggle="dropdown"> Login </a>
+      <% if logged_in? %>
+        <li> <%= link_to current_user.nome, current_user %> </li>
+        <li> <%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Tem certeza que deseja sair do TemLivro?'} %> </li>
+      <% else %>
+        <li> <%= link_to 'Cadastre-se', new_usuario_path %> </li>
+        <li>
+          <a class="dropdown-toggle" data-toggle="dropdown"> Login </a>
           <!-- LOGIN POPUP -->
           <div class="dropdown-menu" >
             <div class="input-group">
@@ -34,6 +39,7 @@
             </div>
           </div>
         </li>
+      <% end %>
       </ul>
 
     </div>

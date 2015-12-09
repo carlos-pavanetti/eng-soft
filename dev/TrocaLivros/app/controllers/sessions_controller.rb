@@ -1,16 +1,19 @@
 class SessionsController < ApplicationController
   def new
+    if logged_in?
+      redirect_to current_user
+    end
   end
 
   def create
     user = Usuario.find_by_email(params[:session][:email])
     unless user
       flash[:danger] = 'Usuário inválido ♿'
-      render 'new'
+      render :new
     else
       unless user.authenticate(params[:session][:password])
         flash[:danger] = 'Senha inválida ♿'
-        render 'new'
+        render :new
       else
         session[:user_id] = user.id
         flash[:success] = 'You are logged in, modafoca!'
@@ -21,6 +24,6 @@ class SessionsController < ApplicationController
 
   def destroy
     session[:user_id] = nil
-    redirect_to root_url, notice: 'Logged out!'
+    redirect_to root_url, flash: {success: 'Logged out!'}
   end
 end

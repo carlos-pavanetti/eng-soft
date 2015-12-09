@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   root 'usuarios#index'
 
-  resources :usuarios
+  resources :usuarios, param: :nome
   resources :sessions
 
   get    'signup'  => 'usuarios#new'
