@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
   def create
     user = Usuario.find_by_email(params[:session][:email])
     unless user
-      flash[:danger] = 'Usuário inválido &#9855;'
+      flash[:danger] = 'Usuário inválido ♿'
       render 'new'
     else
       unless user.authenticate(params[:session][:password])

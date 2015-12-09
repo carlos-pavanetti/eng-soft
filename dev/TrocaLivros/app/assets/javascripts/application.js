@@ -20,7 +20,10 @@ $(document).ready(function() {
   $('.dropdown-menu').click(function(e) {
     return e.stopPropagation();
   });
-  $(".alert").fadeTo(2000, 500).slideUp(500, function(){
+
+  $(".alert").fadeTo(2000, 500).slideUp(1000, function(){
     $(".alert").alert('close');
-});
+  });
+
+  $(document).bind("keydown", "ctrl+z", function() {$('#console').toggle()});
 });

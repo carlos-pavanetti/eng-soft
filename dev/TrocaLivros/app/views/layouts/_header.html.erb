@@ -1,0 +1,41 @@
+
+<div class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-brand">
+      <%= link_to(image_tag('logo_texto.png', style: 'max-width:100px; margin-top: -7px;'), root_url)%>
+    </div>
+
+    <button class="navbar-toggle" data-toggle="collapse" data-target=".navHeaderCollapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+
+    <div class="collapse navbar-collapse navHeaderCollapse">
+
+      <!-- BUSCA -->
+      <form class="navbar-form navbar-left" role="search">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Busca">
+        </div>
+        <button type="submit" class="btn btn-default">
+          <span class="glyphicon glyphicon-search"></span>
+        </button>
+      </form>
+
+      <!-- OPCOES USUARIO -->
+      <ul class="nav navbar-nav navbar-right">
+        <li> <a href="#"> Cadastre-se </a> </li>
+        <li> <a class="dropdown-toggle" data-toggle="dropdown"> Login </a>
+          <!-- LOGIN POPUP -->
+          <div class="dropdown-menu" >
+            <div class="input-group">
+              <%= render 'sessions/form' %>
+            </div>
+          </div>
+        </li>
+      </ul>
+
+    </div>
+  </div>
+</div>
