@@ -1,0 +1,13 @@
+// Place all the styles related to the pages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.jumbotron{
+    background-image: url(livro_aberto.jpg);
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white !important;
+    text-shadow: black 0.2em 0.1em 0.1em;
+    text-align: center;
+}

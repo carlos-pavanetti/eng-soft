@@ -1,8 +1,13 @@
 Rails.application.routes.draw do
-  root 'usuarios#index'
+  root 'pages#home'
 
   resources :usuarios, param: :nome
   resources :sessions
+
+  get    'home' => 'pages#home'
+  get    'sobre' => 'pages#sobre'
+  get    'contato' => 'pages#contato'
+  get    'suporte' => 'pages#suporte'
 
   get    'signup'  => 'usuarios#new'
   get    'login'   => 'sessions#new'

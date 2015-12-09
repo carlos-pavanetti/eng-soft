@@ -29,7 +29,7 @@
         <li> <%= link_to current_user.nome, current_user %> </li>
         <li> <%= link_to 'Logout', logout_path, method: :delete, data: {confirm: 'Tem certeza que deseja sair do TemLivro?'} %> </li>
       <% else %>
-        <li> <%= link_to 'Cadastre-se', new_usuario_path %> </li>
+        <li> <%= link_to 'Cadastre-se', signup_path %> </li>
         <li>
           <a class="dropdown-toggle" data-toggle="dropdown"> Login </a>
           <!-- LOGIN POPUP -->
