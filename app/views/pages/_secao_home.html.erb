@@ -1,11 +1,10 @@
-<% seção_resultados = seção + '-resultados' %>
 <div class="col-sm-12">
-  <h1><a class='accordion-toggle' href='#<%= seção_resultados %>' data-toggle='collapse'><%= seção.capitalize %></a></h1>
-    <div id='<%= seção_resultados %>'  class="panel-collapse collapse in">
-      <div id="<%= seção %>" class="row">
+  <h1><%= link_toggle_accordion(section) %></h1>
+    <div id='<%= section_results(section) %>'  class="panel-collapse collapse in">
+      <div id="<%= section %>" class="row">
 
         <% Livro.last(2).each do |livro| %>
-        <!-- Item Troca -->
+        <!-- Item Seção -->
           <div class="col-md-6 col-xs-12">
             <div href="#" class="thumbnail">
               <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
@@ -18,7 +17,7 @@
               </div>
             </div>
           </div>
-        <!-- Fim Item Troca -->
+        <!-- Fim Item Seção -->
         <% end %>
       </div>
     </div>
