@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   root 'pages#home'
 
   resources :usuarios, param: :nome
+  resources :livros
   resources :sessions
 
   get    'home' => 'pages#home'

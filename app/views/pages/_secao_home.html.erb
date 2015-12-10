@@ -1,0 +1,24 @@
+<div class="col-sm-12">
+  <h1><%= link_toggle_accordion(section) %></h1>
+    <div id='<%= section_results(section) %>'  class="panel-collapse collapse in">
+      <div id="<%= section %>" class="row">
+
+        <% Livro.last(2).each do |livro| %>
+        <!-- Item Seção -->
+          <div class="col-md-6 col-xs-12">
+            <div href="#" class="thumbnail">
+              <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
+              <div class="caption">
+                <%= link_to content_tag(:h3, livro.nome), livro %>
+                <p><strong>Autor: </strong><%= livro.autor %></p>
+                <p><strong>Edição: </strong><%= livro.edicao %></p>
+                <p><strong>Editora: </strong><%= livro.autor %></p>
+                <p><strong>Idioma: </strong><%= livro.idioma %></p>
+              </div>
+            </div>
+          </div>
+        <!-- Fim Item Seção -->
+        <% end %>
+      </div>
+    </div>
+</div>

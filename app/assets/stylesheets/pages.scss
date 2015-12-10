@@ -1,6 +1,11 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+$icon-font-path: 'bootstrap/';
+
+@import "lavish-theme";
+@import "bootstrap-sprockets";
+@import "bootstrap";
 
 .jumbotron{
     background-image: url(livro_aberto.jpg);
@@ -11,3 +16,25 @@
     text-shadow: black 0.2em 0.1em 0.1em;
     text-align: center;
 }
+.thumbnail {min-height: 290px;}
+.thumbnail:hover,
+.thumbnail:focus,
+.thumbnail.active {
+  border-color: $input-border-focus;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
+}
+
+.thumbnail h3{margin-top: 0;}
+
+.thumbnail > img,
+.thumbnail a > img {
+  max-height: 280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 8px;
+  float:left;
+}
+
+.caption {}

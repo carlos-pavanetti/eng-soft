@@ -8,24 +8,5 @@
   </p>
   <p><%= link_to 'Cadastre-se', signup_path, class: 'btn btn-primary btn-lg' %></p>
 </div>
-
-<div class="col-sm-12">
-  <h1><a class='accordion-toggle' href="#troca-resultados" data-toggle='collapse'>Trocas</a></h1>
-    <div id="troca-resultados" class="panel-collapse collapse in">
-      <div id="troca" class="row">
-
-        <% Livro.last(2).each do |livro| %>
-          <div class="col-sm-6">
-            <a href="#" class="thumbnail" style="display: table" class: 'col-sm-3'>
-              <%= image_tag 'capa_stewart.jpg', alt: 'descrição', style: 'max-width: 100%;max-height:100px;'%>
-              <div class="caption">
-                <%= content_tag :h3, livro.nome %>
-                <strong>Autor: </strong> STEWART, James. 6ª Edição
-              </div>
-            </a>
-          </div>
-        <% end %>
-
-      </div>
-    </div>
-</div>
+<%= render 'secao_home', section: 'trocas' %>
+<%= render 'secao_home', section: 'empréstimo' %>
