@@ -16,7 +16,7 @@
       <% end %>
       <%= yield %>
     </div>
-    <%= debug(params) %>
+    <%= debug(params) unless Rails.env.production? %>
     <%= console unless Rails.env.production? %>
     <%= render 'layouts/footer' %>
   </div>
