@@ -8,28 +8,5 @@
   </p>
   <p><%= link_to 'Cadastre-se', signup_path, class: 'btn btn-primary btn-lg' %></p>
 </div>
-
-<div class="col-sm-12">
-  <h1><a class='accordion-toggle' href="#troca-resultados" data-toggle='collapse'>Trocas</a></h1>
-    <div id="troca-resultados" class="panel-collapse collapse in">
-      <div id="troca" class="row">
-
-        <% Livro.last(2).each do |livro| %>
-        <!-- Item Troca -->
-          <div class="col-md-6 col-xs-12">
-            <div href="#" class="thumbnail">
-              <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
-              <div class="caption">
-                <%= link_to content_tag(:h3, livro.nome), livro %>
-                <p><strong>Autor: </strong><%= livro.autor %></p>
-                <p><strong>Edição: </strong><%= livro.edicao %></p>
-                <p><strong>Editora: </strong><%= livro.autor %></p>
-                <p><strong>Idioma: </strong><%= livro.idioma %></p>
-              </div>
-            </div>
-          </div>
-        <!-- Fim Item Troca -->
-        <% end %>
-      </div>
-    </div>
-</div>
+<%= render 'secao_home', seção: 'trocas' %>
+<%= render 'secao_home', seção: 'empréstimo' %>
