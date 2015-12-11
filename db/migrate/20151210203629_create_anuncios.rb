@@ -7,7 +7,6 @@ class CreateAnuncios < ActiveRecord::Migration
       t.integer :prazo_emprestimo
       t.string :troco_por
 
-
       t.timestamps null: false
     end
 
