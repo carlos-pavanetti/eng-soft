@@ -3,13 +3,14 @@
     <div id='<%= section_results(section) %>'  class="panel-collapse collapse in">
       <div id="<%= section %>" class="row">
 
-        <% Anuncio.por_tipo(section).last(2).each do |livro| %>
+        <% Anuncio.por_tipo(section).last(2).each do |anuncio| %>
         <!-- Item Seção -->
+        <% livro = anuncio.livro %>
           <div class="col-md-6 col-xs-12">
             <div href="#" class="thumbnail">
               <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
               <div class="caption">
-                <%= link_to content_tag(:h3, livro.nome), livro %>
+                <%= link_to content_tag(:h3, livro.titulo), livro %>
                 <p><strong>Autor: </strong><%= livro.autor %></p>
                 <p><strong>Edição: </strong><%= livro.edicao %></p>
                 <p><strong>Editora: </strong><%= livro.autor %></p>
