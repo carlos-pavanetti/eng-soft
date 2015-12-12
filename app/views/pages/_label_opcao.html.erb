@@ -1,0 +1,4 @@
+<% span_class = "label label-#{anuncio.tipo_anuncio}"%>
+<% label_texto = 'Troco por' if anuncio.troca? %>
+<% label_texto = 'Empresto por' if anuncio.emprestimo? %>
+<p><%= content_tag :span, label_texto, class: span_class %> <%= anuncio.opcao %> </p>
