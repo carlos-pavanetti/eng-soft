@@ -38,3 +38,13 @@ $icon-font-path: 'bootstrap/';
 }
 
 .caption {}
+
+
+.label-troca {
+  @extend .label-success;
+  font-size: 13px !important;
+}
+
+.label-emprestimo {
+  @extend .label-warning;
+}

@@ -15,6 +15,13 @@
                 <p><strong>Edição: </strong><%= livro.edicao %></p>
                 <p><strong>Editora: </strong><%= livro.autor %></p>
                 <p><strong>Idioma: </strong><%= livro.idioma %></p>
+
+                <% if section == 'troca' %>
+                  <p><span class="label label-troca">Troco por</span> <%= anuncio.troco_por %> </p>
+                <% elsif section == 'emprestimo' %>
+                  <p><span class="label label-emprestimo">Empresto por</span> <%= anuncio.prazo_emprestimo %> </p>
+                <% end %>
+
               </div>
             </div>
           </div>
