@@ -7,8 +7,8 @@ class Anuncio < ActiveRecord::Base
   scope :troca, -> { por_tipo('troca') }
 
   validates :tipo_anuncio, inclusion: {in: %w(troca empréstimo)}
-  validates :prazo_emprestimo, numericality: {only_integer: true}, :if emprestimo?
-  validates :troco_por, presence: true, :if troca?
+  validates :prazo_emprestimo, numericality: {only_integer: true}, if: :emprestimo?
+  validates :troco_por, presence: true, if: :troca?
 
   def opcao
     case tipo_anuncio
