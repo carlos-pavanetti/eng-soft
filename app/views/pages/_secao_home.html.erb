@@ -5,22 +5,7 @@
 
         <% Anuncio.por_tipo(section).last(2).each do |anuncio| %>
         <!-- Item Seção -->
-        <% livro = anuncio.livro %>
-          <div class="col-md-6 col-xs-12">
-            <div href="#" class="thumbnail">
-              <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
-              <div class="caption">
-                <%= link_to content_tag(:h3, livro.titulo), anuncio %>
-                <p><strong>Autor: </strong><%= livro.autor %></p>
-                <p><strong>Edição: </strong><%= livro.edicao %></p>
-                <p><strong>Editora: </strong><%= livro.autor %></p>
-                <p><strong>Idioma: </strong><%= livro.idioma %></p>
-
-                <%= render 'label_opcao', anuncio: anuncio %>
-
-              </div>
-            </div>
-          </div>
+        <%= render 'anuncios/livro', anuncio: anuncio %>
         <!-- Fim Item Seção -->
         <% end %>
       </div>

@@ -14,7 +14,7 @@ class Anuncio < ActiveRecord::Base
     case tipo_anuncio
     when 'troca'
       troco_por
-    when 'emprestimo'
+    when 'empréstimo'
       prazo_emprestimo.to_s + ' dias'
     end
   end
