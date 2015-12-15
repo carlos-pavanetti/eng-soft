@@ -3,7 +3,7 @@ module UsuariosHelper
     return ['new', 'create'].include? params[:action]
   end
 
-  def fields
+  def user_fields
     campos = []
     campos << {field: :nome, label: 'Nome Completo', type: :text_field}
     campos << {field: :email, label: 'Email', type: :text_field}

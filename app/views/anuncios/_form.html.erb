@@ -1,0 +1,38 @@
+<%= form_for(@anuncio, html: {class: 'form-horizontal'}) do |f| %>
+  <% if @anuncio.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@anuncio.errors.count, "error") %> prohibited this anuncio from being saved:</h2>
+
+      <ul>
+      <% @anuncio.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% announce_fields.each do |field, label| %>
+    <div class="form-group">
+      <% if field.include? :label %>
+        <%= f.label field[:label], class: 'col-sm-3 control-label', for: 'anuncio_' +  field[:field].to_s %>
+      <% else field[:sm_offset] = true end %>
+    <% if field.include? :sm_offset %>
+      <div class="col-sm-9 col-sm-offset-3"> <% else %> <div class="col-sm-9">
+    <% end %>
+      <% if field[:type] == :radio_button %>
+          <%= f.collection_radio_buttons(field[:field], Anuncio.all, field[:field], field[:field]) do |b|
+            b.label {b.radio_button(style: 'margin: 0 5px 0 10px') + " #{b.text.capitalize} "}
+          end  %>
+      <% else %>
+        <%= f.send field[:type], field[:field], class: 'col-sm-9 form-control', placeholder: field[:label] %>
+      <% end %>
+      </div>
+    </div>
+  <% end %>
+
+  <div class="actions form-group">
+    <div class="col-sm-9 col-sm-offset-3">
+      <%= f.submit class: 'btn btn-primary btn-block' %>
+    </div>
+  </div>
+<% end %>
