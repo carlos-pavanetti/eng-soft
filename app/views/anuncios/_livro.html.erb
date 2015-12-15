@@ -1,0 +1,15 @@
+<div class="col-md-6 col-xs-12">
+  <div href="#" class="thumbnail">
+    <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
+    <div class="caption">
+      <%= link_to content_tag(:h3, anuncio.titulo), anuncio %>
+      <p><strong>Autor: </strong><%= anuncio.autor %></p>
+      <p><strong>Edição: </strong><%= anuncio.edicao %></p>
+      <p><strong>Editora: </strong><%= anuncio.autor %></p>
+      <p><strong>Idioma: </strong><%= anuncio.idioma %></p>
+
+      <%= render 'anuncios/label_opcao', anuncio: anuncio %>
+
+    </div>
+  </div>
+</div>
