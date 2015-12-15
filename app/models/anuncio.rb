@@ -1,5 +1,5 @@
 class Anuncio < ActiveRecord::Base
-  has_one :livro
+  # has_one :livro
   belongs_to :usuario
 
   scope :por_tipo, -> (t) { where "tipo_anuncio='#{t}'" }
@@ -9,6 +9,15 @@ class Anuncio < ActiveRecord::Base
   validates :tipo_anuncio, inclusion: {in: %w(troca empréstimo)}
   validates :prazo_emprestimo, numericality: {only_integer: true}, if: :emprestimo?
   validates :troco_por, presence: true, if: :troca?
+
+  def opcao=(opc)
+    case tipo_anuncio
+    when 'troca'
+      troco_por = opc
+    when 'empréstimo'
+      prazo_emprestimo = opc
+    end
+  end
 
   def opcao
     case tipo_anuncio

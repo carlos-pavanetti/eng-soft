@@ -4,7 +4,7 @@ class Usuario < ActiveRecord::Base
   extend Hashifiable
   hashify :nome, :email, :senha
 
-  has_many :livros, dependent: :destroy
+  # has_many :livros, dependent: :destroy
   has_many :anuncios, dependent: :destroy
 
   before_save { self.email = email.downcase }
