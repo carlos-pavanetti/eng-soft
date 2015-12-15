@@ -30,8 +30,10 @@ $(document).ready(function() {
   $(".tipo_anuncio_radio").click(function(event) {
     if (event.target.value == 'troca') {
       $("label[for='anuncio_opcao']").text("Troco Por");
+      $("#anuncio_opcao").attr('name', "anuncio[troco_por]");
     } else {
       $("label[for='anuncio_opcao']").text("Prazo de Empréstimo");
+      $("#anuncio_opcao").attr('name', "anuncio[prazo_emprestimo]");
     }
   });
 });

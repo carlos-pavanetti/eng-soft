@@ -21,6 +21,6 @@ class AnunciosController < ApplicationController
 
   private
     def anuncio_params
-      params.require(:anuncio).permit(:titulo, :autor, :edicao, :idioma, :tipo_anuncio)
+      params.require(:anuncio).permit(:titulo, :autor, :edicao, :idioma, :tipo_anuncio, :troco_por, :prazo_emprestimo)
     end
 end
