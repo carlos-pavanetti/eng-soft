@@ -26,4 +26,12 @@ $(document).ready(function() {
   });
 
   $(document).bind("keydown", "ctrl+z", function() {$('#console').toggle()});
+
+  $(".tipo_anuncio_radio").click(function(event) {
+    if (event.target.value == 'troca') {
+      $("label[for='anuncio_opcao']").text("Troco Por");
+    } else {
+      $("label[for='anuncio_opcao']").text("Prazo de Empréstimo");
+    }
+  });
 });

@@ -11,6 +11,8 @@
     </div>
   <% end %>
 
+  <% @anuncio.tipo_anuncio = 'troca' %>
+
   <% announce_fields.each do |field, label| %>
     <div class="form-group">
       <% if field.include? :label %>
@@ -21,7 +23,7 @@
     <% end %>
       <% if field[:type] == :radio_button %>
           <%= f.collection_radio_buttons(field[:field], Anuncio.all, field[:field], field[:field]) do |b|
-            b.label {b.radio_button(style: 'margin: 0 5px 0 10px') + " #{b.text.capitalize} "}
+            b.label {b.radio_button(style: 'margin: 0 5px 0 10px', class: 'tipo_anuncio_radio') + " #{b.text.capitalize} "}
           end  %>
       <% else %>
         <%= f.send field[:type], field[:field], class: 'col-sm-9 form-control', placeholder: field[:label] %>
