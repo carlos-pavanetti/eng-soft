@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151211032953) do
+ActiveRecord::Schema.define(version: 20151215024302) do
 
   create_table "administradores", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -29,25 +29,13 @@ ActiveRecord::Schema.define(version: 20151211032953) do
     t.datetime "created_at",       null: false
     t.datetime "updated_at",       null: false
     t.integer  "usuario_id"
-  end
-
-  add_index "anuncios", ["usuario_id"], name: "index_anuncios_on_usuario_id"
-
-  create_table "livros", force: :cascade do |t|
     t.string   "titulo"
     t.string   "autor"
     t.integer  "edicao"
     t.string   "idioma"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-    t.integer  "usuario_id"
-    t.string   "editora"
-    t.string   "codigo_ISBN"
-    t.integer  "anuncio_id"
   end
 
-  add_index "livros", ["anuncio_id"], name: "index_livros_on_anuncio_id"
-  add_index "livros", ["usuario_id"], name: "index_livros_on_usuario_id"
+  add_index "anuncios", ["usuario_id"], name: "index_anuncios_on_usuario_id"
 
   create_table "usuarios", force: :cascade do |t|
     t.string   "nome"
