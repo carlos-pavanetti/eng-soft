@@ -22,6 +22,10 @@ class AnunciosController < ApplicationController
     end
   end
 
+  def edit
+    @anuncio = Anuncio.find(params[:id])
+  end
+
   def update
     @anuncio = Anuncio.find(params[:id])
     if @anuncio.update(anuncio_params)
