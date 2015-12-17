@@ -1,4 +1,7 @@
 class AnunciosController < ApplicationController
+  def index
+  end
+
   def show
     @anuncio = Anuncio.find params[:id]
   end
@@ -16,6 +19,15 @@ class AnunciosController < ApplicationController
       redirect_to current_user
     else
       render :new
+    end
+  end
+
+  def update
+    @anuncio = Anuncio.find(params[:id])
+    if @anuncio.update(anuncio_params)
+      redirect_to @anuncio, notice: 'Anuncio was successfully updated.'
+    else
+      render :edit
     end
   end
 
