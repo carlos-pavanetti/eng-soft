@@ -1,9 +1,10 @@
 class AnunciosController < ApplicationController
+  before_action :set_anuncio, only: [:show, :edit, :update, :destroy]
+
   def index
   end
 
   def show
-    @anuncio = Anuncio.find params[:id]
   end
 
   def new
@@ -23,11 +24,9 @@ class AnunciosController < ApplicationController
   end
 
   def edit
-    @anuncio = Anuncio.find(params[:id])
   end
 
   def update
-    @anuncio = Anuncio.find(params[:id])
     if @anuncio.update(anuncio_params)
       redirect_to @anuncio, notice: 'Anuncio was successfully updated.'
     else
@@ -36,13 +35,17 @@ class AnunciosController < ApplicationController
   end
 
   def destroy
-    @anuncio = Anuncio.find(params[:id])
     @anuncio.destroy
     redirect_to anuncios_url, notice: 'Anuncio was successfully destroyed.'
   end
 
   private
+    def set_anuncio
+      @anuncio = Anuncio.find(params[:id])
+    end
+
     def anuncio_params
-      params.require(:anuncio).permit(:titulo, :autor, :edicao, :idioma, :tipo_anuncio, :troco_por, :prazo_emprestimo, :imagem_capa)
+      whitelist = [:titulo, :autor, :edicao, :idioma, :tipo_anuncio, :troco_por, :prazo_emprestimo, :imagem_capa]
+      params.require(:anuncio).permit(whitelist)
     end
 end

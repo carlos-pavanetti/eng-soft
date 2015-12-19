@@ -12,6 +12,8 @@
   <% end %>
 
   <% @anuncio.tipo_anuncio ||= 'troca' %>
+  <% @label_anuncio = 'Troco Por' if @anuncio.troca? %>
+  <% @label_anuncio = 'Prazo de Empréstimo' if @anuncio.emprestimo? %>
 
   <% announce_fields.each do |field, label| %>
     <div class="form-group">

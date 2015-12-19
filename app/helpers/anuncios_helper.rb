@@ -8,7 +8,7 @@ module AnunciosHelper
 
     campos << {field: :tipo_anuncio, label: 'Opção', type: :radio_button}
     campos << {field: :observação, label: 'Observação', type: :text_field}
-    campos << {field: :troco_por, label: 'Troco Por', type: :text_field}
+    campos << {field: :opcao, label: @label_anuncio, type: :text_field}
 
     campos << {field: :imagem_capa, label: 'Foto', type: :file_field}
     # campos << {field: :password, label: 'Senha', type: :password_field}

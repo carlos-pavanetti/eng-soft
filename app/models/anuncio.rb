@@ -28,7 +28,7 @@ class Anuncio < ActiveRecord::Base
     when 'troca'
       troco_por
     when 'empréstimo'
-      prazo_emprestimo.to_s + ' dias'
+      prazo_emprestimo
     end
   end
 
