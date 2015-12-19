@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151215024302) do
+ActiveRecord::Schema.define(version: 20151219011635) do
 
   create_table "administradores", force: :cascade do |t|
     t.datetime "created_at", null: false
@@ -26,13 +26,17 @@ ActiveRecord::Schema.define(version: 20151215024302) do
     t.string   "observação"
     t.integer  "prazo_emprestimo"
     t.string   "troco_por"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
     t.integer  "usuario_id"
     t.string   "titulo"
     t.string   "autor"
     t.integer  "edicao"
     t.string   "idioma"
+    t.string   "imagem_capa_file_name"
+    t.string   "imagem_capa_content_type"
+    t.integer  "imagem_capa_file_size"
+    t.datetime "imagem_capa_updated_at"
   end
 
   add_index "anuncios", ["usuario_id"], name: "index_anuncios_on_usuario_id"
