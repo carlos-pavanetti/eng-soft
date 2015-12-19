@@ -11,6 +11,7 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
@@ -29,11 +30,13 @@ $(document).ready(function() {
 
   $(".tipo_anuncio_radio").click(function(event) {
     if (event.target.value == 'troca') {
-      $("label[for='anuncio_opcao']").text("Troco Por");
-      $("#anuncio_opcao").attr('name', "anuncio[troco_por]");
+      $("label[for='anuncio_troco_por']").text("Troco Por");
+      $("#anuncio_troco_por").attr('name', "anuncio[troco_por]");
+      $("#anuncio_troco_por").attr('placeholder', "Livros desejados");
     } else {
-      $("label[for='anuncio_opcao']").text("Prazo de Empréstimo");
-      $("#anuncio_opcao").attr('name', "anuncio[prazo_emprestimo]");
+      $("label[for='anuncio_troco_por']").text("Prazo de Empréstimo");
+      $("#anuncio_troco_por").attr('name', "anuncio[prazo_emprestimo]");
+      $("#anuncio_troco_por").attr('placeholder', "Quantos dias");
     }
   });
 });

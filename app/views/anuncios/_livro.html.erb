@@ -1,6 +1,6 @@
 <div class="col-md-6 col-xs-12">
   <div href="#" class="thumbnail">
-    <%= image_tag 'capa_stewart.jpg', alt: 'Stewart' %>
+    <%= image_tag anuncio.imagem_capa.url  %>
     <div class="caption">
       <%= link_to content_tag(:h3, anuncio.titulo), anuncio %>
       <p><strong>Autor: </strong><%= anuncio.autor %></p>

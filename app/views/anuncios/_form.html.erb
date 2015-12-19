@@ -1,4 +1,4 @@
-<%= form_for(@anuncio, html: {class: 'form-horizontal'}) do |f| %>
+<%= form_for(@anuncio, multipart: true, html: {class: 'form-horizontal'}) do |f| %>
   <% if @anuncio.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@anuncio.errors.count, "error") %> prohibited this anuncio from being saved:</h2>
@@ -11,7 +11,9 @@
     </div>
   <% end %>
 
-  <% @anuncio.tipo_anuncio = 'troca' %>
+  <% @anuncio.tipo_anuncio ||= 'troca' %>
+  <% @label_anuncio = 'Troco Por' if @anuncio.troca? %>
+  <% @label_anuncio = 'Prazo de Empréstimo' if @anuncio.emprestimo? %>
 
   <% announce_fields.each do |field, label| %>
     <div class="form-group">
