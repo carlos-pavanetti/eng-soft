@@ -35,6 +35,12 @@ class AnunciosController < ApplicationController
     end
   end
 
+  def destroy
+    @anuncio = Anuncio.find(params[:id])
+    @anuncio.destroy
+    redirect_to anuncios_url, notice: 'Anuncio was successfully destroyed.'
+  end
+
   private
     def anuncio_params
       params.require(:anuncio).permit(:titulo, :autor, :edicao, :idioma, :tipo_anuncio, :troco_por, :prazo_emprestimo, :imagem_capa)
