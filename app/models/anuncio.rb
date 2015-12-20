@@ -2,7 +2,8 @@ class Anuncio < ActiveRecord::Base
   # has_one :livro
   belongs_to :usuario
 
-  has_attached_file :imagem_capa
+  has_attached_file :imagem_capa unless Rails.env.production?
+  has_attached_file :imagem_capa, storage: imgur if Rails.env.production?
 
   scope :por_tipo, -> (t) { where "tipo_anuncio='#{t}'" }
   scope :emprestimo, -> { por_tipo('empréstimo') }

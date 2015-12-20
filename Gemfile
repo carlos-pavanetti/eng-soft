@@ -35,6 +35,7 @@ gem 'autoprefixer-rails'
 gem 'hashifiable'
 gem 'jquery-turbolinks'
 gem 'paperclip'
+gem 'paperclip-imgur'
 
 group :development, :test do
   gem 'sqlite3'
