@@ -24,6 +24,6 @@ Trocar, doar, emprestar e recomendar livros! Essas são as possibilidades que qu
 Ser lido, relido, folheado por novas mãos, viajar e conhecer novos leitores! São as possibilidades que oferecemos aos livros.
 
 ## Endereços de hospedagem
-Implementação: http://temlivros.herokuapp.com/  
-Front-end: http://temlivro.16mb.com/
+Implementação: http://temlivros.herokuapp.com/ <br />
+Front-end: http://temlivro.16mb.com/ <br />
 Wireframes: https://onedrive.live.com/redir?resid=682353A3F171FED0!256964&authkey=!AMX1nILh4dEZg7g&ithint=folder%2cpng
