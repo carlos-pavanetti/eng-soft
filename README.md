@@ -22,3 +22,7 @@ Ronaldo Nagata | 77493
 Uma rede onde pessoas possam encontrar livros e leitores.
 Trocar, doar, emprestar e recomendar livros! Essas são as possibilidades que queremos oferecer aos leitores.
 Ser lido, relido, folheado por novas mãos, viajar e conhecer novos leitores! São as possibilidades que oferecemos aos livros.
+
+## Endereços de hospedagem
+Implementação: http://temlivros.herokuapp.com/
+Front-end: http://temlivro.16mb.com/
